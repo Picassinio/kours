@@ -1,20 +1,24 @@
 const Page = require('./page');
 
 class LoginPage extends Page {
-    // get inputWindow() {
-    //     return $('//button[@class="js-login"]');
-    // }
+    get navBar() {
+        return $('//button[@id="nav-bar-toggle"]');
+    }
 
     get inputUsername() {
-        return $('//*[@id="personalLogin"]\n');
+        return $('//*[@id="email"]');
     }
 
     get inputPassword() {
-        return $('//*[@id="personalPassword"]\n');
+        return $('//*[@id="password"]');
     }
 
     get btnSubmit() {
-        return $('//button[@class=\'btn btn-inverse btn-small\']');
+        return $('//div[@id=\'root\']//button[@type="submit"]');
+    }
+
+    get logOut() {
+        return $('//div[@id="logout"]');
     }
 
     async login (username, password) {

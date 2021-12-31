@@ -1,14 +1,14 @@
 const LoginPage = require('../pageobjects/login.page');
-const SecurePage = require('../pageobjects/secure.page');
 
 describe('My Login application', () => {
     it('should login with valid credentials', async () => {
         await LoginPage.open();
 
-        await LoginPage.login('Pablos', 'CDXHH9RtSsZecdZ');
-        await expect(SecurePage.flashAlert).toBeExisting();
-        await expect(SecurePage.flashAlert).toHaveTextContaining(
-            'Павел Букаринов');
+        await LoginPage.login('pasha6207@yandex.ru', 'aA123aA11.');
+        await LoginPage.navBar.click();
+        await expect(LoginPage.logOut).toBeExisting();
+        await expect(LoginPage.logOut).toHaveTextContaining(
+            'Logout');
     });
 });
 
