@@ -1,7 +1,7 @@
 const LoginPage = require('../pageobjects/LoginPage');
 const MainMenu = require('../pageobjects/MainMenuPage');
 
-describe('My Login application', () => {
+xdescribe('My Login application', () => {
     it('should login with valid credentials', async () => {
         await LoginPage.open();
 
