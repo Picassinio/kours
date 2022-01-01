@@ -1,9 +1,6 @@
 const Page = require('./page');
 
 class LoginPage extends Page {
-    get navBar() {
-        return $('//button[@id="nav-bar-toggle"]');
-    }
 
     get inputUsername() {
         return $('//*[@id="email"]');
