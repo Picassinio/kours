@@ -1,6 +1,6 @@
 exports.config = {
 
-     specs: [
+    specs: [
         './test/specs/**/*.js'
     ],
     // Patterns to exclude.
@@ -11,7 +11,10 @@ exports.config = {
     capabilities: [{
         maxInstances: 5,
         browserName: 'chrome',
-        acceptInsecureCerts: true
+        // ChromeOptions: {
+        //     "args": ["-incognito",],
+        // },
+        acceptInsecureCerts: true,
     }],
     logLevel: 'info',
     bail: 0,

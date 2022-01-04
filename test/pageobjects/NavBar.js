@@ -1,6 +1,6 @@
 const Page = require('./page');
 
-class MainMenuPage extends Page {
+class NavBar extends Page {
     get navBar() {
         return $('//button[@id="nav-bar-toggle"]');
     }
@@ -8,8 +8,7 @@ class MainMenuPage extends Page {
     get problemsLink() {
         return $('//a[@href=\'/problems\']');
     }
-
     
 }
 
-module.exports = new MainMenuPage();
+module.exports = new NavBar();
