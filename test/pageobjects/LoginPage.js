@@ -11,8 +11,7 @@ class LoginPage extends Page {
 
     get logout() { return $('//div[@id="logout"]'); }
 
-    get invalidEmailAlert() { '//div[contains(@class,"MuiAlert-me")]' }
-    get
+    get invalidAlert() { return $('//div[contains(@class,"MuiAlert-me")]'); }
 
     async login (username, password) {
         await this.inputUsername.setValue(username);

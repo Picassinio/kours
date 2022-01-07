@@ -1,5 +1,5 @@
 async function clearInputValue(element) {
-    await while(element.getValue() !== '') {
+    while(element.getValue() !== '') {
         await element.doubleClick();
         await element.keys('Delete');
     }

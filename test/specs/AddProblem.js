@@ -5,12 +5,13 @@ const CreateProblemPage = require('../pageobjects/CreateProblemPage');
 
 xdescribe('Adding problems', () => {
 
-    before(function () {
-        LoginPage.login('pasha6207@yandex.ru', 'aA123aA11.');
+    before('Title', async () => {
+        await LoginPage.open();
+        await LoginPage.login('pasha6207@yandex.ru', 'aA123aA11.');
     });
 
     it('Positive adding of problem', async () => {
-        await LoginPage.open();
+        // await LoginPage.open();
 
         await MainMenuPage.navBar.click();
         await MainMenuPage.problemsLink.click();

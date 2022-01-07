@@ -17,9 +17,12 @@ class CreateProblemPage extends Page {
         return $('//textarea[@class=\'w-md-editor-text-input \']');
     }
 
-    get submitButton() {
-        return $('//div[@class=\'mt-3 d-flex justify-content-end\']/button[@type=\'submit\']');
-    }
+    // get submitButton() {
+    //     return $('//div[@class="mt-3 d-flex justify-content-end"]/button[@type="submit"]');
+    // }
+
+    get submitButton() { return $('[type="submit"]'); }
+
 
     get myNewProblem() {
         return $('//a[text() = \'Problem222\']');
